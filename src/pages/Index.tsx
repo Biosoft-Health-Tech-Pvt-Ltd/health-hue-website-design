@@ -1,13 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import EBiosProducts from "@/components/EBiosProducts";
 import VideoSection from "@/components/VideoSection";
+import UserExperiences from "@/components/UserExperiences";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import UserExperiences from "@/components/UserExperiences";
 
 const Index = () => {
   const structuredData = {
