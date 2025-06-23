@@ -4,101 +4,87 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-yellow-50 overflow-hidden">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-xl animate-float animate-delay-300"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-orange-300 to-orange-500 rounded-full blur-lg animate-float animate-delay-500"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+      {/* Enhanced Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full blur-3xl animate-float animate-delay-400"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full blur-2xl animate-float animate-delay-200"></div>
       </div>
 
-      <div className="container mx-auto px-4 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-left">
-                Healthcare
-                <span className="block bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent animate-fade-in-left animate-delay-200">
-                  Made Simple
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg animate-fade-in-left animate-delay-300">
-                Transforming healthcare delivery with innovative software solutions. 
-                Streamline operations, enhance patient care, and boost efficiency with our comprehensive healthcare technology platform.
-              </p>
+      <div className="container mx-auto px-4 relative z-10 pt-20">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Enhanced Typography Hierarchy */}
+          <div className="mb-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-8">
+              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
+              <span className="text-blue-800 font-semibold text-sm tracking-wide uppercase">
+                Trusted by 500+ Healthcare Providers
+              </span>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-left animate-delay-400">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-pulse-glow">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button variant="outline" size="lg" className="border-2 border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl transition-all duration-300 group hover-lift hover-glow">
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center gap-8 pt-6 animate-fade-in-up animate-delay-500">
-              <div className="text-center transform hover:scale-105 transition-transform duration-300">
-                <div className="text-2xl font-bold text-gray-900">500+</div>
-                <div className="text-sm text-gray-600">Healthcare Providers</div>
-              </div>
-              <div className="text-center transform hover:scale-105 transition-transform duration-300 animate-delay-100">
-                <div className="text-2xl font-bold text-gray-900">99.9%</div>
-                <div className="text-sm text-gray-600">Uptime Guaranteed</div>
-              </div>
-              <div className="text-center transform hover:scale-105 transition-transform duration-300 animate-delay-200">
-                <div className="text-2xl font-bold text-gray-900">24/7</div>
-                <div className="text-sm text-gray-600">Support Available</div>
-              </div>
-            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+              Healthcare
+              <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Made Simple
+              </span>
+            </h1>
           </div>
 
-          {/* Right Content - Dashboard Preview */}
-          <div className="relative animate-fade-in-right animate-delay-600">
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-all duration-700 hover-lift animate-float">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between animate-slide-down">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg flex items-center justify-center animate-pulse-glow">
-                      <div className="w-6 h-6 bg-white rounded-sm"></div>
-                    </div>
-                    <h3 className="font-semibold text-gray-900">Patient Dashboard</h3>
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse animate-delay-100"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse animate-delay-200"></div>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg transform hover:scale-105 transition-all duration-300 animate-fade-in-up animate-delay-100">
-                    <div className="text-sm text-blue-600 font-medium">Active Patients</div>
-                    <div className="text-2xl font-bold text-blue-900">1,247</div>
-                  </div>
-                  <div className="bg-orange-50 p-4 rounded-lg transform hover:scale-105 transition-all duration-300 animate-fade-in-up animate-delay-200">
-                    <div className="text-sm text-orange-600 font-medium">Appointments</div>
-                    <div className="text-2xl font-bold text-orange-900">83</div>
-                  </div>
-                </div>
+          <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto mb-12 leading-relaxed font-light animate-fade-in-up animate-delay-200">
+            Streamline your healthcare operations with our comprehensive software platform. 
+            <span className="font-medium text-slate-700">
+              Improve patient care, reduce costs, and enhance efficiency
+            </span>
+            with industry-leading technology.
+          </p>
 
-                <div className="space-y-2 animate-fade-in-up animate-delay-300">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-600">System Performance</span>
-                    <span className="text-green-600 font-medium">Excellent</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                    <div className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full w-4/5 transform transition-all duration-1000 animate-fade-in-right"></div>
-                  </div>
-                </div>
-              </div>
+          {/* Enhanced CTA Section */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fade-in-up animate-delay-400">
+            <Button 
+              size="lg" 
+              className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-lg font-semibold hover-lift"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="group border-2 border-slate-300 hover:border-blue-500 text-slate-700 hover:text-blue-600 px-10 py-4 rounded-2xl backdrop-blur-sm bg-white/80 hover:bg-white/90 transition-all duration-300 text-lg font-semibold hover-lift"
+            >
+              <Play className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              Watch Demo
+            </Button>
+          </div>
+
+          {/* Enhanced Trust Indicators */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60 hover:opacity-80 transition-opacity duration-500 animate-fade-in-up animate-delay-600">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-slate-800 mb-1">99.9%</div>
+              <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-slate-800 mb-1">500+</div>
+              <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Providers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-slate-800 mb-1">24/7</div>
+              <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-slate-800 mb-1">HIPAA</div>
+              <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Compliant</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Enhanced Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
