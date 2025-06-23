@@ -1,10 +1,9 @@
-
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50" role="banner">
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur-3xl animate-float"></div>
@@ -41,39 +40,38 @@ const Hero = () => {
 
           {/* Enhanced CTA Section */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fade-in-up animate-delay-400">
-            <Button 
-              size="lg" 
+            <button 
               className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-lg font-semibold hover-lift"
+              aria-label="Start your free 30-day trial of Biosoft healthcare software"
             >
               Start Free Trial
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
+            </button>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <button 
               className="group border-2 border-slate-300 hover:border-blue-500 text-slate-700 hover:text-blue-600 px-10 py-4 rounded-2xl backdrop-blur-sm bg-white/80 hover:bg-white/90 transition-all duration-300 text-lg font-semibold hover-lift"
+              aria-label="Watch a demo of Biosoft healthcare platform"
             >
-              <Play className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              <Play className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
               Watch Demo
-            </Button>
+            </button>
           </div>
 
-          {/* Enhanced Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60 hover:opacity-80 transition-opacity duration-500 animate-fade-in-up animate-delay-600">
-            <div className="text-center">
+          {/* Enhanced Trust Indicators with Schema Markup */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60 hover:opacity-80 transition-opacity duration-500 animate-fade-in-up animate-delay-600" itemScope itemType="https://schema.org/Service">
+            <div className="text-center" itemProp="serviceOutput">
               <div className="text-3xl font-bold text-slate-800 mb-1">99.9%</div>
               <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Uptime</div>
             </div>
-            <div className="text-center">
+            <div className="text-center" itemProp="provider" itemScope itemType="https://schema.org/Organization">
               <div className="text-3xl font-bold text-slate-800 mb-1">500+</div>
               <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Providers</div>
             </div>
-            <div className="text-center">
+            <div className="text-center" itemProp="hoursAvailable">
               <div className="text-3xl font-bold text-slate-800 mb-1">24/7</div>
               <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Support</div>
             </div>
-            <div className="text-center">
+            <div className="text-center" itemProp="additionalProperty">
               <div className="text-3xl font-bold text-slate-800 mb-1">HIPAA</div>
               <div className="text-sm text-slate-600 font-medium uppercase tracking-wider">Compliant</div>
             </div>
@@ -82,7 +80,7 @@ const Hero = () => {
       </div>
 
       {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-label="Scroll down for more content">
         <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
         </div>
