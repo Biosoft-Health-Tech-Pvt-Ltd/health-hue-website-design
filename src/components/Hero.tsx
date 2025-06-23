@@ -1,9 +1,12 @@
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   const handleVideoClick = () => {
-    window.open("https://youtu.be/JHpFFxnHtzc?si=UlVjtMBjQTNmHfl_", "_blank");
+    setShowVideo(true);
   };
 
   return (
@@ -55,6 +58,25 @@ const Hero = () => {
               Watch Demo
             </button>
           </div>
+
+          {/* Inline Video Modal */}
+          {showVideo && (
+            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={() => setShowVideo(false)}>
+              <div className="relative w-full max-w-4xl aspect-video" onClick={(e) => e.stopPropagation()}>
+                <button onClick={() => setShowVideo(false)} className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors text-xl font-bold">
+                  ✕ Close
+                </button>
+                <iframe
+                  src="https://www.youtube.com/embed/JHpFFxnHtzc?autoplay=1&rel=0"
+                  title="Biosoft Healthcare Platform Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-xl shadow-2xl"
+                ></iframe>
+              </div>
+            </div>
+          )}
 
           {/* Enhanced Trust Indicators with Schema Markup */}
           <div
