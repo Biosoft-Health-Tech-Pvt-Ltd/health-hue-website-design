@@ -5,7 +5,14 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigation = [];
+  const navigation = [
+    { name: "Solutions", href: "#services" },
+    { name: "Products", href: "#products" },
+    { name: "Resources", href: "#resources" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/50 animate-slide-down shadow-sm">
