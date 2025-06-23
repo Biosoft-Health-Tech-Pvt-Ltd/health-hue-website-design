@@ -35,19 +35,19 @@ const Stats = () => {
 
   return (
     <section className="py-20 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-600 relative overflow-hidden">
-      {/* Background Pattern */}
+      {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white rounded-full blur-lg"></div>
+        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-xl animate-float animate-delay-400"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white rounded-full blur-lg animate-float animate-delay-200"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4 animate-fade-in-up">
             Proven Results Across the Healthcare Industry
           </h2>
-          <p className="text-xl text-orange-100 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-100 max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
             Our platform delivers measurable improvements in healthcare delivery and operational efficiency
           </p>
         </div>
@@ -56,22 +56,26 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div 
               key={index}
-              className="text-center group"
+              className={`text-center group animate-scale-in opacity-0`}
+              style={{ 
+                animationDelay: `${0.3 + index * 0.15}s`,
+                animationFillMode: 'forwards'
+              }}
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r ${stat.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="h-8 w-8 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-500 hover-lift group-hover:scale-105">
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r ${stat.color} flex items-center justify-center group-hover:scale-110 transition-all duration-500 animate-pulse-glow`}>
+                  <stat.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
                 </div>
                 
-                <div className="text-4xl font-bold text-white mb-2 group-hover:scale-105 transition-transform">
+                <div className="text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300 animate-fade-in-up">
                   {stat.number}
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-100 transition-colors duration-300">
                   {stat.label}
                 </h3>
                 
-                <p className="text-orange-100 text-sm">
+                <p className="text-orange-100 text-sm group-hover:text-white transition-colors duration-300">
                   {stat.description}
                 </p>
               </div>

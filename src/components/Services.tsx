@@ -46,10 +46,10 @@ const Services = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">
             Comprehensive Healthcare Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
             Our integrated platform provides everything you need to deliver exceptional patient care 
             while streamlining your healthcare operations.
           </p>
@@ -59,18 +59,22 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2"
+              className={`group hover:shadow-xl transition-all duration-500 border-0 shadow-lg hover-lift animate-scale-in opacity-0`}
+              style={{ 
+                animationDelay: `${0.1 + index * 0.1}s`,
+                animationFillMode: 'forwards'
+              }}
             >
               <CardHeader className="pb-4">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="h-8 w-8 text-white" />
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-500 animate-pulse-glow`}>
+                  <service.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                <CardTitle className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 leading-relaxed">
+                <CardDescription className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                   {service.description}
                 </CardDescription>
               </CardContent>
