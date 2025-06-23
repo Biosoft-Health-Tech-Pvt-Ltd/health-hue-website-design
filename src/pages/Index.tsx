@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import UserExperiences from "@/components/UserExperiences";
 
 const Index = () => {
   const structuredData = {
@@ -31,16 +32,38 @@ const Index = () => {
       addressCountry: "US",
       addressRegion: "CA",
     },
-    video: {
-      "@type": "VideoObject",
-      name: "Biosoft Healthcare Platform Demo",
-      description: "See how healthcare providers are transforming patient care with Biosoft's comprehensive platform",
-      contentUrl: "https://youtu.be/JHpFFxnHtzc?si=UlVjtMBjQTNmHfl_",
-      embedUrl: "https://www.youtube.com/embed/JHpFFxnHtzc",
-      uploadDate: "2024-01-01",
-      duration: "PT3M",
-      thumbnailUrl: "https://img.youtube.com/vi/JHpFFxnHtzc/maxresdefault.jpg",
-    },
+    video: [
+      {
+        "@type": "VideoObject",
+        name: "Biosoft Healthcare Platform Demo",
+        description: "See how healthcare providers are transforming patient care with Biosoft's comprehensive platform",
+        contentUrl: "https://youtu.be/JHpFFxnHtzc?si=UlVjtMBjQTNmHfl_",
+        embedUrl: "https://www.youtube.com/embed/JHpFFxnHtzc",
+        uploadDate: "2024-01-01",
+        duration: "PT3M",
+        thumbnailUrl: "https://img.youtube.com/vi/JHpFFxnHtzc/maxresdefault.jpg",
+      },
+      {
+        "@type": "VideoObject",
+        name: "Emergency Department Transformation",
+        description: "Dr. Martinez shares how Biosoft reduced patient wait times by 40% in their emergency department",
+        contentUrl: "https://youtu.be/4LlIrLdu7PE",
+        embedUrl: "https://www.youtube.com/embed/4LlIrLdu7PE",
+        uploadDate: "2024-01-01",
+        duration: "PT4M32S",
+        thumbnailUrl: "https://img.youtube.com/vi/4LlIrLdu7PE/maxresdefault.jpg",
+      },
+      {
+        "@type": "VideoObject",
+        name: "Rural Healthcare Innovation",
+        description: "How a small clinic improved patient care access through telemedicine integration",
+        contentUrl: "https://youtu.be/bPzttnhdQrE",
+        embedUrl: "https://www.youtube.com/embed/bPzttnhdQrE",
+        uploadDate: "2024-01-01",
+        duration: "PT3M45S",
+        thumbnailUrl: "https://img.youtube.com/vi/bPzttnhdQrE/maxresdefault.jpg",
+      },
+    ],
   };
 
   return (
@@ -52,6 +75,7 @@ const Index = () => {
           <Hero />
           <Services />
           <VideoSection />
+          <UserExperiences />
           <Stats />
           <Testimonials />
           <CTA />
