@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Certifications from "@/components/Certifications";
 import EBiosProducts from "@/components/EBiosProducts";
 import VideoSection from "@/components/VideoSection";
 import UserExperiences from "@/components/UserExperiences";
@@ -76,6 +77,7 @@ const Index = () => {
           <Hero />
           <Services />
           <VideoSection />
+          <Certifications />
           <UserExperiences />
           <Stats />
           <Testimonials />
