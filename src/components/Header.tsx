@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Heart, ChevronDown, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -77,16 +77,28 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo with Orange Theme */}
+            {/* Enhanced Logo with Biosoft Logo Image */}
             <div className="flex items-center gap-3 animate-fade-in-left group cursor-pointer">
               <div className="relative">
                 <div
                   className={`${
                     isScrolled ? "w-10 h-10" : "w-12 h-12"
-                  } bg-biosoft-orange rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-3 group-hover:shadow-biosoft-orange/25`}
+                  } bg-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-1 group-hover:shadow-biosoft-orange/25 overflow-hidden`}
                 >
-                  <Heart className={`${isScrolled ? "h-5 w-5" : "h-7 w-7"} text-white transition-all duration-500 group-hover:scale-110`} />
-                  <div className="absolute inset-0 bg-biosoft-orange-light rounded-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  {/* Biosoft Logo Image */}
+                  <img
+                    src="/BiosoftLogo.png"
+                    alt="Biosoft Healthcare Solutions Logo"
+                    className={`${isScrolled ? "h-8 w-8" : "h-10 w-10"} object-contain transition-all duration-500 group-hover:scale-110`}
+                    onError={(e) => {
+                      // Fallback to JPG if PNG fails
+                      const img = e.target as HTMLImageElement;
+                      if (img.src.includes(".png")) {
+                        img.src = "/BiosoftLogo.jpg";
+                      }
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-biosoft-orange-light rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-biosoft-yellow rounded-full animate-pulse">
                   <Sparkles className="h-3 w-3 text-white absolute top-0.5 left-0.5" />

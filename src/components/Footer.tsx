@@ -1,4 +1,4 @@
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
@@ -19,11 +19,23 @@ const Footer = () => {
     <footer className="bg-biosoft-gray-dark text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-6 gap-8">
-          {/* Company Info */}
+          {/* Company Info with Logo */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-biosoft-orange to-biosoft-yellow rounded-lg flex items-center justify-center">
-                <Heart className="h-7 w-7 text-white" />
+              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                {/* Biosoft Logo Image */}
+                <img
+                  src="/BiosoftLogo.png"
+                  alt="Biosoft Healthcare Solutions Logo"
+                  className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    // Fallback to JPG if PNG fails
+                    const img = e.target as HTMLImageElement;
+                    if (img.src.includes(".png")) {
+                      img.src = "/BiosoftLogo.jpg";
+                    }
+                  }}
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-biosoft-blue-light to-biosoft-blue-lighter bg-clip-text text-transparent">Biosoft</span>
