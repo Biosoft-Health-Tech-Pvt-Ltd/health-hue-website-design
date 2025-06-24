@@ -46,13 +46,7 @@ const Hero = () => {
       subtitle: "Streamline your healthcare operations with our comprehensive software platform.",
       description: "Improve patient care, reduce costs, and enhance efficiency with industry-leading technology.",
     },
-    {
-      type: "video",
-      title: "See Biosoft in Action",
-      subtitle: "Watch how healthcare providers are transforming patient care",
-      videoUrl: "https://youtu.be/JHpFFxnHtzc?si=o9Gfr1gu5gA9_ipJ",
-      videoId: "JHpFFxnHtzc",
-    },
+
     {
       type: "stats",
       title: "Trusted Worldwide",
@@ -166,69 +160,6 @@ const Hero = () => {
                                   Watch Demo
                                 </span>
                               </button>
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    )}
-
-                    {slide.type === "video" && (
-                      <>
-                        <div className="relative bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl mx-auto max-w-7xl mx-4 sm:mx-auto">
-                          <div className="absolute inset-0 bg-biosoft-orange/10 rounded-2xl sm:rounded-3xl"></div>
-
-                          <div className="relative z-10">
-                            <div className="inline-flex items-center gap-2 sm:gap-3 bg-black/30 backdrop-blur-sm border border-white/30 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-6 sm:mb-8 md:mb-12">
-                              <Play className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-biosoft-orange" />
-                              <span className="text-white font-semibold text-xs sm:text-xs md:text-sm tracking-wide uppercase">Platform Demo</span>
-                            </div>
-
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight tracking-tight">
-                              <span className="text-white drop-shadow-lg">See Biosoft in</span>
-                              <span className="block text-biosoft-orange mt-1 md:mt-2 drop-shadow-lg">Action</span>
-                            </h2>
-
-                            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed font-medium drop-shadow-md px-4 sm:px-0">
-                              {slide.subtitle}
-                            </p>
-
-                            {/* Significantly larger video preview container */}
-                            <div className="max-w-6xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
-                              <div
-                                className="relative w-full bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm rounded-3xl sm:rounded-4xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20"
-                                style={{ aspectRatio: "16/9", minHeight: "400px" }}
-                                onClick={handleVideoClick}
-                              >
-                                {!thumbnailError ? (
-                                  <img
-                                    src={`https://img.youtube.com/vi/${slide.videoId}/maxresdefault.jpg`}
-                                    alt="Biosoft Healthcare Platform Demo"
-                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-500"
-                                    onError={() => setThumbnailError(true)}
-                                    loading="lazy"
-                                  />
-                                ) : (
-                                  <div className="w-full h-full bg-biosoft-orange/30 flex items-center justify-center">
-                                    <div className="text-center">
-                                      <Play className="h-20 w-20 md:h-28 md:w-28 text-white/80 mx-auto mb-6" />
-                                      <p className="text-white/90 text-xl md:text-2xl font-semibold">Biosoft Platform Demo</p>
-                                      <p className="text-white/70 text-lg md:text-xl mt-3">Click to watch</p>
-                                    </div>
-                                  </div>
-                                )}
-
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                  <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-500 border-2 border-white/40">
-                                    <Play className="h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:w-16 text-white ml-1 group-hover:scale-110 transition-transform duration-300" />
-                                  </div>
-                                </div>
-
-                                <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 bg-black/70 backdrop-blur-sm text-white px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium border border-white/20">
-                                  3:00
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
