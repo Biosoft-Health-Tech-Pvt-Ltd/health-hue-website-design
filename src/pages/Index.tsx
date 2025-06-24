@@ -5,6 +5,7 @@ import Certifications from "@/components/Certifications";
 import EBiosProducts from "@/components/EBiosProducts";
 import VideoSection from "@/components/VideoSection";
 import UserExperiences from "@/components/UserExperiences";
+import Team from "@/components/Team";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -85,6 +86,11 @@ const Index = () => {
           <section id="about" className="bg-biosoft-gray/10">
             <Certifications />
             <UserExperiences />
+          </section>
+          <section id="team" className="bg-white">
+            <Team />
+          </section>
+          <section id="stats" className="bg-biosoft-gray/10">
             <Stats />
           </section>
           <section id="testimonials" className="bg-white">

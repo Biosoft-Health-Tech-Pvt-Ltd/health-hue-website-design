@@ -10,6 +10,7 @@ const Header = () => {
   const navigation = [
     { name: "Solutions", href: "#services", hasDropdown: true },
     { name: "Products", href: "#products", hasDropdown: true },
+    { name: "Team", href: "#team", hasDropdown: false },
     { name: "Resources", href: "#resources", hasDropdown: false },
     { name: "Pricing", href: "#pricing", hasDropdown: false },
     { name: "About", href: "#about", hasDropdown: false },
