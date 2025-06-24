@@ -1,14 +1,43 @@
 import { ArrowRight, Play, ChevronLeft, ChevronRight, Sparkles, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const [thumbnailError, setThumbnailError] = useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
 
   const handleVideoClick = () => {
+    setIsVideoLoading(true);
     setShowVideo(true);
   };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
+    setIsVideoLoading(false);
+  };
+
+  // Close video with escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && showVideo) {
+        handleCloseVideo();
+      }
+    };
+
+    if (showVideo) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [showVideo]);
 
   const slides = [
     {
@@ -170,14 +199,28 @@ const Hero = () => {
 
                             <div className="max-w-5xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
                               <div
-                                className="relative aspect-video bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20"
+                                className="relative w-full bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20"
+                                style={{ aspectRatio: "16/9" }}
                                 onClick={handleVideoClick}
                               >
-                                <img
-                                  src={`https://img.youtube.com/vi/${slide.videoId}/maxresdefault.jpg`}
-                                  alt="Biosoft Healthcare Platform Demo"
-                                  className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-500"
-                                />
+                                {!thumbnailError ? (
+                                  <img
+                                    src={`https://img.youtube.com/vi/${slide.videoId}/maxresdefault.jpg`}
+                                    alt="Biosoft Healthcare Platform Demo"
+                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-500"
+                                    onError={() => setThumbnailError(true)}
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full bg-gradient-to-br from-biosoft-blue/30 to-biosoft-orange/30 flex items-center justify-center">
+                                    <div className="text-center">
+                                      <Play className="h-16 w-16 md:h-20 md:w-20 text-white/80 mx-auto mb-4" />
+                                      <p className="text-white/90 text-lg md:text-xl font-semibold">Biosoft Platform Demo</p>
+                                      <p className="text-white/70 text-sm md:text-base mt-2">Click to watch</p>
+                                    </div>
+                                  </div>
+                                )}
+
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -253,24 +296,42 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
+      {/* Enhanced Video Modal with Improved Responsiveness */}
       {showVideo && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={() => setShowVideo(false)}>
-          <div className="relative w-full max-w-6xl aspect-video" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-black/95 backdrop-blur-md flex items-center justify-center z-[60] p-2 sm:p-4" onClick={handleCloseVideo}>
+          {isVideoLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+            </div>
+          )}
+
+          <div className="relative w-full max-w-7xl mx-auto" style={{ aspectRatio: "16/9" }} onClick={(e) => e.stopPropagation()}>
+            {/* Close button with better positioning */}
             <button
-              onClick={() => setShowVideo(false)}
-              className="absolute -top-12 md:-top-16 right-0 text-white/80 hover:text-white transition-colors text-lg md:text-xl font-bold bg-white/10 backdrop-blur-sm rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20"
+              onClick={handleCloseVideo}
+              className="absolute -top-8 sm:-top-12 md:-top-16 right-0 text-white/80 hover:text-white transition-colors text-lg md:text-xl font-bold bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/20 hover:border-white/40 z-10"
+              aria-label="Close video"
             >
               ✕
             </button>
-            <iframe
-              src="https://www.youtube.com/embed/JHpFFxnHtzc?autoplay=1&rel=0"
-              title="Biosoft Healthcare Platform Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-2xl shadow-2xl border border-white/20"
-            ></iframe>
+
+            {/* Enhanced iframe with better error handling */}
+            <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+              <iframe
+                src="https://www.youtube.com/embed/JHpFFxnHtzc?autoplay=1&rel=0&modestbranding=1&showinfo=0&controls=1&fs=1&cc_load_policy=0&iv_load_policy=3"
+                title="Biosoft Healthcare Platform Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+                onLoad={() => setIsVideoLoading(false)}
+              ></iframe>
+            </div>
+
+            {/* Video information overlay */}
+            <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 bg-black/70 backdrop-blur-sm text-white px-2 sm:px-4 py-1 sm:py-2 rounded-lg border border-white/20">
+              <p className="text-xs sm:text-sm font-medium">Biosoft Healthcare Platform Demo</p>
+            </div>
           </div>
         </div>
       )}
