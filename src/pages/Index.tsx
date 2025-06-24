@@ -71,26 +71,26 @@ const Index = () => {
   return (
     <>
       <SEO structuredData={structuredData} />
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-background">
         <Header />
         <main>
           <Hero />
-          <section id="services">
+          <section id="services" className="bg-biosoft-gray/20">
             <Services />
           </section>
-          <section id="products">
+          <section id="products" className="bg-white">
             <VideoSection />
             <EBiosProducts />
           </section>
-          <section id="about">
+          <section id="about" className="bg-biosoft-gray/10">
             <Certifications />
             <UserExperiences />
             <Stats />
           </section>
-          <section id="testimonials">
+          <section id="testimonials" className="bg-white">
             <Testimonials />
           </section>
-          <section id="contact">
+          <section id="contact" className="bg-gradient-primary">
             <CTA />
           </section>
         </main>

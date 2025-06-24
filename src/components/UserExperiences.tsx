@@ -98,20 +98,20 @@ const UserExperiences = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-slate-50/50 to-blue-50/30">
+    <section className="py-24 bg-gradient-to-br from-white via-biosoft-gray/20 to-biosoft-blue-light/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
-            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
-            <span className="text-blue-800 font-semibold text-sm tracking-wide uppercase">Real User Experiences</span>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-biosoft-blue-light/30 to-biosoft-blue-lighter/30 border border-biosoft-blue/20 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
+            <div className="w-2 h-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light rounded-full animate-pulse"></div>
+            <span className="text-biosoft-blue font-semibold text-sm tracking-wide uppercase">Real User Experiences</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 animate-fade-in-up animate-delay-100">
+          <h2 className="text-4xl md:text-5xl font-black text-biosoft-gray-dark mb-6 animate-fade-in-up animate-delay-100">
             Healthcare Professionals
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Share Their Success Stories</span>
+            <span className="block bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light bg-clip-text text-transparent">Share Their Success Stories</span>
           </h2>
 
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up animate-delay-200">
+          <p className="text-xl text-biosoft-gray-medium max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up animate-delay-200">
             Discover how healthcare providers across different specialties and settings have transformed their operations and improved patient care with Biosoft's comprehensive
             platform.
           </p>
@@ -149,7 +149,7 @@ const UserExperiences = () => {
                     <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">{experience.duration}</div>
 
                     {/* Category Badge */}
-                    <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="absolute top-4 left-4 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light text-white px-3 py-1 rounded-full text-xs font-semibold">
                       {experience.category}
                     </div>
                   </div>
@@ -158,28 +158,30 @@ const UserExperiences = () => {
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg flex-shrink-0`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light flex items-center justify-center shadow-lg flex-shrink-0`}>
                       <experience.icon className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight mb-2">{experience.title}</h3>
-                      <p className="text-slate-600 text-sm leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{experience.description}</p>
+                      <h3 className="text-lg font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300 leading-tight mb-2">
+                        {experience.title}
+                      </h3>
+                      <p className="text-biosoft-gray-medium text-sm leading-relaxed group-hover:text-biosoft-gray-dark transition-colors duration-300">{experience.description}</p>
                     </div>
                   </div>
 
                   {/* User Info */}
-                  <div className="border-t border-slate-100 pt-4 space-y-3">
+                  <div className="border-t border-biosoft-gray/30 pt-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-semibold text-slate-900 text-sm">{experience.userName}</div>
-                        <div className="text-slate-500 text-xs">{experience.userType}</div>
-                        <div className="text-blue-600 text-xs font-medium">{experience.institution}</div>
+                        <div className="font-semibold text-biosoft-gray-dark text-sm">{experience.userName}</div>
+                        <div className="text-biosoft-gray-medium text-xs">{experience.userType}</div>
+                        <div className="text-biosoft-blue text-xs font-medium">{experience.institution}</div>
                       </div>
                     </div>
 
                     {/* Metrics */}
-                    <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-3 border border-emerald-100">
-                      <div className="text-emerald-700 font-semibold text-sm">{experience.metrics}</div>
+                    <div className="bg-gradient-to-r from-biosoft-green/10 to-biosoft-orange-light/10 rounded-lg p-3 border border-biosoft-green/20">
+                      <div className="text-biosoft-green font-semibold text-sm">{experience.metrics}</div>
                     </div>
                   </div>
                 </div>
@@ -190,12 +192,12 @@ const UserExperiences = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16 animate-fade-in-up animate-delay-600">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Join These Success Stories?</h3>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-biosoft-blue-light/10 to-biosoft-blue-lighter/10 rounded-2xl p-8 border border-biosoft-blue/20">
+            <h3 className="text-2xl font-bold text-biosoft-gray-dark mb-4">Ready to Join These Success Stories?</h3>
+            <p className="text-biosoft-gray-medium mb-6 max-w-2xl mx-auto">
               Discover how Biosoft can transform your healthcare practice with the same proven results that our satisfied users have experienced.
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-lg font-semibold hover-lift">
+            <button className="bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 text-lg font-semibold hover-lift">
               Schedule Your Demo Today
             </button>
           </div>
@@ -205,7 +207,7 @@ const UserExperiences = () => {
         {activeVideo && (
           <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={closeVideo}>
             <div className="relative w-full max-w-5xl aspect-video" onClick={(e) => e.stopPropagation()}>
-              <button onClick={closeVideo} className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors text-xl font-bold z-10">
+              <button onClick={closeVideo} className="absolute -top-12 right-0 text-white hover:text-biosoft-gray transition-colors text-xl font-bold z-10">
                 ✕ Close
               </button>
               <iframe

@@ -12,9 +12,9 @@ const EBiosProducts = () => {
       description:
         "Comprehensive hospital management solution that integrates all clinical, administrative, and financial operations into a unified platform designed for complex healthcare institutions.",
       targetUsers: "Hospital Administrators, Clinical Directors, Department Heads, and Healthcare Executives",
-      primaryColor: "from-blue-600 to-indigo-600",
-      accentColor: "from-blue-50 to-indigo-50",
-      borderColor: "border-blue-200",
+      primaryColor: "from-biosoft-blue to-biosoft-blue-light",
+      accentColor: "from-biosoft-blue-light/10 to-biosoft-blue-lighter/10",
+      borderColor: "border-biosoft-blue/20",
       features: [
         "Patient Registration and Admission Management",
         "Electronic Medical Records with Clinical Decision Support",
@@ -45,9 +45,9 @@ const EBiosProducts = () => {
       description:
         "Specialized laboratory management platform that optimizes diagnostic workflows, ensures quality control, and integrates seamlessly with hospital and clinic information systems.",
       targetUsers: "Laboratory Directors, Pathologists, Lab Technicians, and Quality Assurance Managers",
-      primaryColor: "from-emerald-600 to-teal-600",
-      accentColor: "from-emerald-50 to-teal-50",
-      borderColor: "border-emerald-200",
+      primaryColor: "from-biosoft-green to-biosoft-orange-light",
+      accentColor: "from-biosoft-green/10 to-biosoft-orange-light/10",
+      borderColor: "border-biosoft-green/20",
       features: [
         "Sample Tracking and Chain of Custody Management",
         "Automated Instrument Integration and Data Collection",
@@ -78,9 +78,9 @@ const EBiosProducts = () => {
       description:
         "Integrated practice management solution designed for medical practices, clinics, and healthcare providers who require efficient patient care delivery and practice administration.",
       targetUsers: "Practice Owners, Medical Providers, Practice Managers, and Administrative Staff",
-      primaryColor: "from-purple-600 to-violet-600",
-      accentColor: "from-purple-50 to-violet-50",
-      borderColor: "border-purple-200",
+      primaryColor: "from-biosoft-orange to-biosoft-yellow",
+      accentColor: "from-biosoft-orange/10 to-biosoft-yellow/10",
+      borderColor: "border-biosoft-orange/20",
       features: [
         "Patient Scheduling and Appointment Management",
         "Electronic Health Records with Clinical Templates",
@@ -106,20 +106,20 @@ const EBiosProducts = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-slate-50/50">
+    <section className="py-24 bg-gradient-to-b from-white to-biosoft-gray/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
-            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
-            <span className="text-blue-800 font-semibold text-sm tracking-wide uppercase">eBios Product Suite</span>
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-biosoft-blue-light/30 to-biosoft-blue-lighter/30 border border-biosoft-blue/20 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
+            <div className="w-2 h-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light rounded-full animate-pulse"></div>
+            <span className="text-biosoft-blue font-semibold text-sm tracking-wide uppercase">eBios Product Suite</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 animate-fade-in-up animate-delay-100">
+          <h2 className="text-4xl md:text-5xl font-black text-biosoft-gray-dark mb-6 animate-fade-in-up animate-delay-100">
             Comprehensive Healthcare
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Management Solutions</span>
+            <span className="block bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light bg-clip-text text-transparent">Management Solutions</span>
           </h2>
 
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up animate-delay-200">
+          <p className="text-xl text-biosoft-gray-medium max-w-4xl mx-auto leading-relaxed font-light animate-fade-in-up animate-delay-200">
             The eBios platform delivers specialized management information systems that address the unique operational requirements of hospitals, laboratories, and medical
             practices across the healthcare continuum.
           </p>
@@ -147,37 +147,41 @@ const EBiosProducts = () => {
                           <product.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
                         </div>
                         <div>
-                          <CardTitle className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300">{product.name}</CardTitle>
-                          <p className="text-slate-500 font-medium">{product.fullName}</p>
+                          <CardTitle className="text-2xl font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300">{product.name}</CardTitle>
+                          <p className="text-biosoft-gray-medium font-medium">{product.fullName}</p>
                         </div>
                       </div>
 
-                      <p className="text-slate-600 leading-relaxed text-lg group-hover:text-slate-700 transition-colors duration-300 mb-6">{product.description}</p>
+                      <p className="text-biosoft-gray-medium leading-relaxed text-lg group-hover:text-biosoft-gray-dark transition-colors duration-300 mb-6">
+                        {product.description}
+                      </p>
 
                       <div className="bg-white/60 rounded-lg p-4 border border-white/40 mb-6">
                         <div className="flex items-center gap-2 mb-2">
-                          <Users className="h-4 w-4 text-slate-600" />
-                          <span className="font-semibold text-slate-900 text-sm">Target Users:</span>
+                          <Users className="h-4 w-4 text-biosoft-gray-medium" />
+                          <span className="font-semibold text-biosoft-gray-dark text-sm">Target Users:</span>
                         </div>
-                        <p className="text-slate-600 text-sm">{product.targetUsers}</p>
+                        <p className="text-biosoft-gray-medium text-sm">{product.targetUsers}</p>
                       </div>
                     </CardHeader>
 
                     {/* Key Metrics */}
                     <div className="grid md:grid-cols-3 gap-4 mb-8">
                       <div className="bg-white/60 rounded-lg p-4 text-center border border-white/40">
-                        <div className="text-2xl font-bold text-slate-900 mb-1">{product.keyMetrics.efficiency}</div>
-                        <div className="text-xs text-slate-600 uppercase tracking-wider">Efficiency Gain</div>
+                        <div className="text-2xl font-bold text-biosoft-gray-dark mb-1">{product.keyMetrics.efficiency}</div>
+                        <div className="text-xs text-biosoft-gray-medium uppercase tracking-wider">Efficiency Gain</div>
                       </div>
                       <div className="bg-white/60 rounded-lg p-4 text-center border border-white/40">
-                        <div className="text-2xl font-bold text-slate-900 mb-1">{product.keyMetrics.satisfaction || product.keyMetrics.accuracy || product.keyMetrics.revenue}</div>
-                        <div className="text-xs text-slate-600 uppercase tracking-wider">
+                        <div className="text-2xl font-bold text-biosoft-gray-dark mb-1">
+                          {product.keyMetrics.satisfaction || product.keyMetrics.accuracy || product.keyMetrics.revenue}
+                        </div>
+                        <div className="text-xs text-biosoft-gray-medium uppercase tracking-wider">
                           {product.keyMetrics.satisfaction ? "Satisfaction" : product.keyMetrics.accuracy ? "Accuracy" : "Revenue"}
                         </div>
                       </div>
                       <div className="bg-white/60 rounded-lg p-4 text-center border border-white/40">
-                        <div className="text-2xl font-bold text-slate-900 mb-1">{product.keyMetrics.compliance}</div>
-                        <div className="text-xs text-slate-600 uppercase tracking-wider">Compliance</div>
+                        <div className="text-2xl font-bold text-biosoft-gray-dark mb-1">{product.keyMetrics.compliance}</div>
+                        <div className="text-xs text-biosoft-gray-medium uppercase tracking-wider">Compliance</div>
                       </div>
                     </div>
 
@@ -195,14 +199,14 @@ const EBiosProducts = () => {
                       {/* Core Features */}
                       <div>
                         <div className="flex items-center gap-2 mb-6">
-                          <Database className="h-5 w-5 text-slate-700" />
-                          <h3 className="text-lg font-bold text-slate-900">Core Capabilities</h3>
+                          <Database className="h-5 w-5 text-biosoft-gray-dark" />
+                          <h3 className="text-lg font-bold text-biosoft-gray-dark">Core Capabilities</h3>
                         </div>
                         <div className="space-y-3">
                           {product.features.slice(0, 4).map((feature, idx) => (
                             <div key={idx} className="flex items-start gap-3">
-                              <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-slate-700 font-medium">{feature}</span>
+                              <CheckCircle className="h-5 w-5 text-biosoft-green mt-0.5 flex-shrink-0" />
+                              <span className="text-biosoft-gray-dark font-medium">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -211,27 +215,27 @@ const EBiosProducts = () => {
                       {/* Advanced Features */}
                       <div>
                         <div className="flex items-center gap-2 mb-6">
-                          <Shield className="h-5 w-5 text-slate-700" />
-                          <h3 className="text-lg font-bold text-slate-900">Advanced Features</h3>
+                          <Shield className="h-5 w-5 text-biosoft-gray-dark" />
+                          <h3 className="text-lg font-bold text-biosoft-gray-dark">Advanced Features</h3>
                         </div>
                         <div className="space-y-3">
                           {product.features.slice(4).map((feature, idx) => (
                             <div key={idx} className="flex items-start gap-3">
-                              <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-slate-700 font-medium">{feature}</span>
+                              <CheckCircle className="h-5 w-5 text-biosoft-green mt-0.5 flex-shrink-0" />
+                              <span className="text-biosoft-gray-dark font-medium">{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
                       {/* Key Benefits */}
-                      <div className="bg-gradient-to-br from-slate-50 to-white rounded-lg p-6 border border-slate-200">
-                        <h4 className="font-bold text-slate-900 mb-4">Key Benefits</h4>
+                      <div className="bg-gradient-to-br from-biosoft-gray/30 to-white rounded-lg p-6 border border-biosoft-gray-medium/30">
+                        <h4 className="font-bold text-biosoft-gray-dark mb-4">Key Benefits</h4>
                         <div className="space-y-2">
                           {product.benefits.map((benefit, idx) => (
                             <div key={idx} className="flex items-start gap-2">
-                              <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-slate-600 text-sm">{benefit}</span>
+                              <div className="w-2 h-2 bg-gradient-to-r from-biosoft-green to-biosoft-orange-light rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-biosoft-gray-medium text-sm">{benefit}</span>
                             </div>
                           ))}
                         </div>
@@ -246,19 +250,19 @@ const EBiosProducts = () => {
 
         {/* Integration Message */}
         <div className="text-center mt-20 animate-fade-in-up animate-delay-800">
-          <div className="bg-gradient-to-r from-slate-900 to-blue-900 rounded-2xl p-12 text-white">
+          <div className="bg-gradient-to-r from-biosoft-gray-dark to-biosoft-blue rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-6">Integrated Healthcare Technology Ecosystem</h3>
-            <p className="text-xl text-slate-200 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-biosoft-gray mb-8 max-w-4xl mx-auto leading-relaxed">
               The eBios platform provides seamless integration between hospital operations, laboratory management, and practice administration, creating a unified technology
               environment that supports comprehensive healthcare delivery across your organization.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button className="bg-white text-slate-900 hover:bg-slate-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift font-semibold px-8 py-3">
+              <Button className="bg-white text-biosoft-gray-dark hover:bg-biosoft-gray rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift font-semibold px-8 py-3">
                 Schedule Integration Consultation
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-slate-900 rounded-xl transition-all duration-300 hover-lift font-semibold px-8 py-3"
+                className="border-white text-white hover:bg-white hover:text-biosoft-gray-dark rounded-xl transition-all duration-300 hover-lift font-semibold px-8 py-3"
               >
                 Download Technical Specifications
               </Button>

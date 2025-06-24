@@ -1,80 +1,92 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Biosoft Design System - All colors, gradients, fonts, etc defined here */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light mode - Biosoft color system */
+    --background: 180 12% 90%; /* biosoft-gray #dfe9e9 */
+    --foreground: 120 3% 29%; /* biosoft-gray-dark #5b5f5e */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* white for contrast */
+    --card-foreground: 120 3% 29%; /* biosoft-gray-dark */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 120 3% 29%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 203 91% 37%; /* biosoft-blue #077abb */
+    --primary-foreground: 0 0% 100%; /* white */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 180 12% 90%; /* biosoft-gray #dfe9e9 */
+    --secondary-foreground: 120 3% 29%; /* biosoft-gray-dark */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 60 3% 49%; /* biosoft-gray-medium #7f827c */
+    --muted-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 21 87% 50%; /* biosoft-orange #eb6c1d */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 21 87% 50%; /* biosoft-orange for warnings */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 60 3% 49%; /* biosoft-gray-medium */
+    --input: 180 12% 90%; /* biosoft-gray */
+    --ring: 203 91% 37%; /* biosoft-blue */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar using biosoft colors */
+    --sidebar-background: 203 78% 76%; /* biosoft-blue-light #6cbcec */
+    --sidebar-foreground: 120 3% 29%; /* biosoft-gray-dark */
+    --sidebar-primary: 203 91% 37%; /* biosoft-blue */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 12% 90%; /* biosoft-gray */
+    --sidebar-accent-foreground: 120 3% 29%;
+    --sidebar-border: 60 3% 49%; /* biosoft-gray-medium */
+    --sidebar-ring: 21 87% 50%; /* biosoft-orange */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark mode - Biosoft color system with darker variants */
+    --background: 120 3% 29%; /* biosoft-gray-dark #5b5f5e */
+    --foreground: 180 12% 90%; /* biosoft-gray #dfe9e9 */
+
+    --card: 60 3% 49%; /* biosoft-gray-medium for dark cards */
+    --card-foreground: 180 12% 90%;
+
+    --popover: 60 3% 49%;
+    --popover-foreground: 180 12% 90%;
+
+    --primary: 203 78% 76%; /* biosoft-blue-light for dark mode */
+    --primary-foreground: 120 3% 29%;
+
+    --secondary: 60 3% 49%; /* biosoft-gray-medium */
+    --secondary-foreground: 180 12% 90%;
+
+    --muted: 120 3% 29%; /* biosoft-gray-dark */
+    --muted-foreground: 180 12% 90%;
+
+    --accent: 21 62% 69%; /* biosoft-orange-light #e29a71 */
+    --accent-foreground: 120 3% 29%;
+
+    --destructive: 21 87% 50%; /* biosoft-orange */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 60 3% 49%;
+    --input: 60 3% 49%;
+    --ring: 203 78% 76%;
+
+    /* Dark sidebar */
+    --sidebar-background: 120 3% 29%;
+    --sidebar-foreground: 180 12% 90%;
+    --sidebar-primary: 203 78% 76%;
+    --sidebar-primary-foreground: 120 3% 29%;
+    --sidebar-accent: 60 3% 49%;
+    --sidebar-accent-foreground: 180 12% 90%;
+    --sidebar-border: 60 3% 49%;
+    --sidebar-ring: 21 62% 69%;
   }
 }
 
@@ -155,10 +167,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    box-shadow: 0 0 20px rgba(7, 122, 187, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6), 0 0 60px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 40px rgba(7, 122, 187, 0.6), 0 0 60px rgba(108, 188, 236, 0.4);
   }
 }
 
@@ -212,7 +224,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(7, 122, 187, 0.4), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -246,14 +258,14 @@
   animation-delay: 0.6s;
 }
 
-/* Enhanced Hover Effects */
+/* Enhanced Hover Effects with Biosoft Colors */
 .hover-lift {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 30px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 30px rgba(7, 122, 187, 0.3);
 }
 
 .hover-glow {
@@ -261,43 +273,103 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.4), 0 0 60px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 40px rgba(7, 122, 187, 0.4), 0 0 60px rgba(235, 108, 29, 0.3);
   filter: brightness(1.1);
 }
 
-/* Glass Morphism Effects */
+/* Glass Morphism Effects with Biosoft Tints */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(223, 233, 233, 0.1);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(7, 122, 187, 0.2);
 }
 
 .glass-dark {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(91, 95, 94, 0.1);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(108, 188, 236, 0.2);
 }
 
-/* Neon glow effects */
-.neon-cyan {
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 40px rgba(6, 182, 212, 0.3), 0 0 60px rgba(6, 182, 212, 0.1);
+/* Biosoft Neon Effects */
+.neon-primary {
+  box-shadow: 0 0 20px rgba(7, 122, 187, 0.5), 0 0 40px rgba(7, 122, 187, 0.3), 0 0 60px rgba(7, 122, 187, 0.1);
 }
 
-.neon-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.3), 0 0 60px rgba(59, 130, 246, 0.1);
+.neon-accent {
+  box-shadow: 0 0 20px rgba(235, 108, 29, 0.5), 0 0 40px rgba(235, 108, 29, 0.3), 0 0 60px rgba(235, 108, 29, 0.1);
 }
 
-/* Gradient text utilities */
-.gradient-text-cyan {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+.neon-success {
+  box-shadow: 0 0 20px rgba(81, 128, 80, 0.5), 0 0 40px rgba(81, 128, 80, 0.3), 0 0 60px rgba(81, 128, 80, 0.1);
+}
+
+.neon-warning {
+  box-shadow: 0 0 20px rgba(249, 203, 13, 0.5), 0 0 40px rgba(249, 203, 13, 0.3), 0 0 60px rgba(249, 203, 13, 0.1);
+}
+
+/* Biosoft Gradient Text */
+.gradient-text-primary {
+  background: linear-gradient(45deg, #077abb, #6cbcec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-warm {
-  background: linear-gradient(45deg, #f59e0b, #ef4444);
+.gradient-text-accent {
+  background: linear-gradient(45deg, #eb6c1d, #f9cb0d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.gradient-text-nature {
+  background: linear-gradient(45deg, #518050, #e29a71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-full {
+  background: linear-gradient(45deg, #077abb, #eb6c1d, #f9cb0d, #518050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Biosoft Background Gradients */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #077abb 0%, #6cbcec 50%, #68b4e4 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #eb6c1d 0%, #f9cb0d 50%, #e29a71 100%);
+}
+
+.bg-gradient-nature {
+  background: linear-gradient(135deg, #518050 0%, #e29a71 100%);
+}
+
+.bg-gradient-subtle {
+  background: linear-gradient(135deg, #dfe9e9 0%, #6cbcec 100%);
+}
+
+.bg-gradient-cool {
+  background: linear-gradient(135deg, #6cbcec 0%, #68b4e4 50%, #dfe9e9 100%);
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #077abb 0%, #eb6c1d 25%, #f9cb0d 50%, #518050 75%, #6cbcec 100%);
+}
+
+/* Biosoft themed patterns */
+.pattern-dots {
+  background-image: radial-gradient(circle, rgba(7, 122, 187, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background-image: 
+    linear-gradient(rgba(7, 122, 187, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7, 122, 187, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
