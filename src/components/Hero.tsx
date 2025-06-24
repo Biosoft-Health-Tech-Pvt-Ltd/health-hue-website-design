@@ -67,19 +67,16 @@ const Hero = () => {
   ];
 
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-biosoft-gray-dark via-biosoft-blue to-biosoft-blue-light"
-      role="banner"
-    >
-      {/* Enhanced Background with Better Overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-biosoft-gray-dark" role="banner">
+      {/* Enhanced Background with Orange Theme */}
       <div className="absolute inset-0">
         {/* Dark overlay for better text contrast */}
         <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-biosoft-blue-light/20 to-biosoft-blue-lighter/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-biosoft-orange/20 to-biosoft-yellow/20 rounded-full blur-3xl animate-float animate-delay-400"></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-biosoft-green/20 to-biosoft-orange-light/20 rounded-full blur-2xl animate-float animate-delay-200"></div>
+        {/* Floating geometric shapes with orange theme */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-biosoft-orange/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-biosoft-orange-light/20 rounded-full blur-3xl animate-float animate-delay-400"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-biosoft-yellow/20 rounded-full blur-2xl animate-float animate-delay-200"></div>
 
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -112,10 +109,10 @@ const Hero = () => {
                       <>
                         {/* Enhanced Glass morphism card container with better contrast */}
                         <div className="relative bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl mx-auto max-w-5xl mx-4 sm:mx-auto">
-                          <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/10 rounded-2xl sm:rounded-3xl"></div>
+                          <div className="absolute inset-0 bg-white/10 rounded-2xl sm:rounded-3xl"></div>
 
                           <div className="relative z-10">
-                            {/* Trust badge with better contrast */}
+                            {/* Trust badge with orange theme */}
                             <div className="inline-flex items-center gap-2 sm:gap-3 bg-black/30 backdrop-blur-sm border border-white/30 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-6 sm:mb-8 md:mb-12">
                               <Shield className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white" />
                               <span className="text-white font-semibold text-xs sm:text-xs md:text-sm tracking-wide uppercase">Trusted by 500+ Healthcare Providers</span>
@@ -124,9 +121,7 @@ const Hero = () => {
 
                             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-black text-white mb-4 md:mb-6 lg:mb-8 leading-tight tracking-tight">
                               <span className="text-white drop-shadow-lg">Healthcare Made</span>
-                              <span className="block bg-gradient-to-r from-biosoft-blue-lighter via-white to-biosoft-blue-light bg-clip-text text-transparent mt-1 md:mt-2 drop-shadow-lg">
-                                Simple
-                              </span>
+                              <span className="block text-biosoft-orange mt-1 md:mt-2 drop-shadow-lg">Simple</span>
                             </h1>
 
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/90 max-w-4xl mx-auto mb-4 md:mb-6 lg:mb-8 leading-relaxed font-medium drop-shadow-md px-4 sm:px-0">
@@ -136,7 +131,7 @@ const Hero = () => {
                               {slide.description}
                             </p>
 
-                            {/* Feature highlights with better mobile visibility */}
+                            {/* Feature highlights with orange theme */}
                             <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-6 mb-6 md:mb-8 lg:mb-12 px-4 sm:px-0">
                               <div className="flex items-center gap-1.5 sm:gap-2 bg-black/30 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border border-white/20">
                                 <Zap className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-biosoft-yellow" />
@@ -147,14 +142,14 @@ const Hero = () => {
                                 <span className="text-white text-xs sm:text-xs md:text-sm font-medium">HIPAA Compliant</span>
                               </div>
                               <div className="flex items-center gap-1.5 sm:gap-2 bg-black/30 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 border border-white/20">
-                                <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-biosoft-blue-light" />
+                                <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-biosoft-orange-light" />
                                 <span className="text-white text-xs sm:text-xs md:text-sm font-medium">99.9% Uptime</span>
                               </div>
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-0">
-                              <button className="w-full sm:w-auto group relative bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-2xl shadow-2xl hover:shadow-biosoft-blue/25 transition-all duration-500 text-sm sm:text-base md:text-lg font-bold overflow-hidden hover:scale-105 hover:-translate-y-1">
-                                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              <button className="w-full sm:w-auto group relative bg-biosoft-orange hover:bg-biosoft-orange-light text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-2xl shadow-2xl hover:shadow-biosoft-orange/25 transition-all duration-500 text-sm sm:text-base md:text-lg font-bold overflow-hidden hover:scale-105 hover:-translate-y-1">
+                                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <span className="relative flex items-center justify-center whitespace-nowrap">
                                   Start Free Trial
                                   <ArrowRight className="ml-2 md:ml-3 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
@@ -165,7 +160,7 @@ const Hero = () => {
                                 onClick={handleVideoClick}
                                 className="w-full sm:w-auto group relative bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white/50 text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-2xl transition-all duration-300 text-sm sm:text-base md:text-lg font-bold overflow-hidden hover:scale-105 hover:-translate-y-1"
                               >
-                                <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <span className="relative flex items-center justify-center whitespace-nowrap">
                                   <Play className="mr-2 md:mr-3 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:scale-110 transition-transform duration-300" />
                                   Watch Demo
@@ -179,8 +174,8 @@ const Hero = () => {
 
                     {slide.type === "video" && (
                       <>
-                        <div className="relative bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl mx-auto max-w-6xl mx-4 sm:mx-auto">
-                          <div className="absolute inset-0 bg-gradient-to-r from-biosoft-orange/10 to-biosoft-yellow/10 rounded-2xl sm:rounded-3xl"></div>
+                        <div className="relative bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl mx-auto max-w-7xl mx-4 sm:mx-auto">
+                          <div className="absolute inset-0 bg-biosoft-orange/10 rounded-2xl sm:rounded-3xl"></div>
 
                           <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 sm:gap-3 bg-black/30 backdrop-blur-sm border border-white/30 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-6 sm:mb-8 md:mb-12">
@@ -190,17 +185,18 @@ const Hero = () => {
 
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight tracking-tight">
                               <span className="text-white drop-shadow-lg">See Biosoft in</span>
-                              <span className="block bg-gradient-to-r from-biosoft-orange to-biosoft-yellow bg-clip-text text-transparent mt-1 md:mt-2 drop-shadow-lg">Action</span>
+                              <span className="block text-biosoft-orange mt-1 md:mt-2 drop-shadow-lg">Action</span>
                             </h2>
 
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed font-medium drop-shadow-md px-4 sm:px-0">
                               {slide.subtitle}
                             </p>
 
-                            <div className="max-w-5xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
+                            {/* Significantly larger video preview container */}
+                            <div className="max-w-6xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
                               <div
-                                className="relative w-full bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20"
-                                style={{ aspectRatio: "16/9" }}
+                                className="relative w-full bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-sm rounded-3xl sm:rounded-4xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20"
+                                style={{ aspectRatio: "16/9", minHeight: "400px" }}
                                 onClick={handleVideoClick}
                               >
                                 {!thumbnailError ? (
@@ -212,11 +208,11 @@ const Hero = () => {
                                     loading="lazy"
                                   />
                                 ) : (
-                                  <div className="w-full h-full bg-gradient-to-br from-biosoft-blue/30 to-biosoft-orange/30 flex items-center justify-center">
+                                  <div className="w-full h-full bg-biosoft-orange/30 flex items-center justify-center">
                                     <div className="text-center">
-                                      <Play className="h-16 w-16 md:h-20 md:w-20 text-white/80 mx-auto mb-4" />
-                                      <p className="text-white/90 text-lg md:text-xl font-semibold">Biosoft Platform Demo</p>
-                                      <p className="text-white/70 text-sm md:text-base mt-2">Click to watch</p>
+                                      <Play className="h-20 w-20 md:h-28 md:w-28 text-white/80 mx-auto mb-6" />
+                                      <p className="text-white/90 text-xl md:text-2xl font-semibold">Biosoft Platform Demo</p>
+                                      <p className="text-white/70 text-lg md:text-xl mt-3">Click to watch</p>
                                     </div>
                                   </div>
                                 )}
@@ -224,12 +220,12 @@ const Hero = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-500 border-2 border-white/40">
-                                    <Play className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-white ml-1 group-hover:scale-110 transition-transform duration-300" />
+                                  <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-500 border-2 border-white/40">
+                                    <Play className="h-8 w-8 sm:h-12 sm:w-12 md:h-16 md:w-16 text-white ml-1 group-hover:scale-110 transition-transform duration-300" />
                                   </div>
                                 </div>
 
-                                <div className="absolute bottom-2 sm:bottom-4 md:bottom-6 right-2 sm:right-4 md:right-6 bg-black/70 backdrop-blur-sm text-white px-2 sm:px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm font-medium border border-white/20">
+                                <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 md:right-8 bg-black/70 backdrop-blur-sm text-white px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium border border-white/20">
                                   3:00
                                 </div>
                               </div>
@@ -242,19 +238,17 @@ const Hero = () => {
                     {slide.type === "stats" && (
                       <>
                         <div className="relative bg-black/20 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl mx-auto max-w-6xl mx-4 sm:mx-auto">
-                          <div className="absolute inset-0 bg-gradient-to-r from-biosoft-green/10 to-biosoft-orange-light/10 rounded-2xl sm:rounded-3xl"></div>
+                          <div className="absolute inset-0 bg-biosoft-orange/10 rounded-2xl sm:rounded-3xl"></div>
 
                           <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 sm:gap-3 bg-black/30 backdrop-blur-sm border border-white/30 rounded-full px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-6 sm:mb-8 md:mb-12">
-                              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-biosoft-green" />
+                              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-biosoft-orange" />
                               <span className="text-white font-semibold text-xs sm:text-xs md:text-sm tracking-wide uppercase">Proven Results</span>
                             </div>
 
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-4 sm:mb-6 md:mb-8 leading-tight tracking-tight">
                               <span className="text-white drop-shadow-lg">Trusted</span>
-                              <span className="block bg-gradient-to-r from-biosoft-green to-biosoft-orange-light bg-clip-text text-transparent mt-1 md:mt-2 drop-shadow-lg">
-                                Worldwide
-                              </span>
+                              <span className="block text-biosoft-orange mt-1 md:mt-2 drop-shadow-lg">Worldwide</span>
                             </h2>
 
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed font-medium drop-shadow-md px-4 sm:px-0">
@@ -274,8 +268,8 @@ const Hero = () => {
                             </div>
 
                             <div className="px-4 sm:px-0">
-                              <button className="w-full sm:w-auto group relative bg-gradient-to-r from-biosoft-green to-biosoft-orange-light hover:from-biosoft-green hover:to-biosoft-orange text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-2xl shadow-2xl hover:shadow-biosoft-green/25 transition-all duration-500 text-sm sm:text-base md:text-lg font-bold overflow-hidden hover:scale-105 hover:-translate-y-1">
-                                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              <button className="w-full sm:w-auto group relative bg-biosoft-orange hover:bg-biosoft-orange-light text-white px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-2xl shadow-2xl hover:shadow-biosoft-orange/25 transition-all duration-500 text-sm sm:text-base md:text-lg font-bold overflow-hidden hover:scale-105 hover:-translate-y-1">
+                                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <span className="relative flex items-center justify-center whitespace-nowrap">
                                   Join Our Network
                                   <ArrowRight className="ml-2 md:ml-3 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />

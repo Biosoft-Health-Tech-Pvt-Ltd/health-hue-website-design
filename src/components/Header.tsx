@@ -77,79 +77,75 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo with Better Contrast */}
+            {/* Enhanced Logo with Orange Theme */}
             <div className="flex items-center gap-3 animate-fade-in-left group cursor-pointer">
               <div className="relative">
                 <div
                   className={`${
                     isScrolled ? "w-10 h-10" : "w-12 h-12"
-                  } bg-gradient-to-r from-biosoft-blue via-biosoft-blue-light to-biosoft-blue-lighter rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-3 group-hover:shadow-biosoft-blue/25`}
+                  } bg-biosoft-orange rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-3 group-hover:shadow-biosoft-orange/25`}
                 >
                   <Heart className={`${isScrolled ? "h-5 w-5" : "h-7 w-7"} text-white transition-all duration-500 group-hover:scale-110`} />
-                  <div className="absolute inset-0 bg-gradient-to-r from-biosoft-blue-light to-biosoft-blue-lighter rounded-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-biosoft-orange-light rounded-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-biosoft-orange to-biosoft-yellow rounded-full animate-pulse">
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-biosoft-yellow rounded-full animate-pulse">
                   <Sparkles className="h-3 w-3 text-white absolute top-0.5 left-0.5" />
                 </div>
               </div>
               <div className="transition-all duration-500">
-                <span
-                  className={`${
-                    isScrolled ? "text-xl" : "text-2xl"
-                  } font-black bg-gradient-to-r from-biosoft-gray-dark via-biosoft-blue to-biosoft-blue-light bg-clip-text text-transparent transition-all duration-500 group-hover:from-biosoft-blue group-hover:to-biosoft-blue-lighter`}
-                >
+                <span className={`${isScrolled ? "text-xl" : "text-2xl"} font-black text-biosoft-gray-dark transition-all duration-500 group-hover:text-biosoft-orange`}>
                   Biosoft
                 </span>
                 <div
                   className={`${
                     isScrolled ? "text-xs" : "text-xs"
-                  } text-biosoft-gray-dark font-medium -mt-1 tracking-wider transition-all duration-500 group-hover:text-biosoft-blue`}
+                  } text-biosoft-gray-dark font-medium -mt-1 tracking-wider transition-all duration-500 group-hover:text-biosoft-orange`}
                 >
                   HEALTHCARE MADE SIMPLE
                 </div>
               </div>
             </div>
 
-            {/* Enhanced Desktop Navigation with Better Contrast */}
+            {/* Enhanced Desktop Navigation with Orange Theme */}
             <nav className="hidden lg:flex items-center gap-6 xl:gap-8 animate-fade-in-up animate-delay-200">
               {navigation.map((item, index) => (
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => handleMenuClick(item.name, item.href)}
                     className={`flex items-center gap-1 transition-all duration-300 font-semibold relative text-sm tracking-wide uppercase transform ${
-                      clickedItem === item.name ? "scale-110 text-biosoft-blue" : "text-biosoft-gray-dark hover:text-biosoft-blue hover:scale-105"
+                      clickedItem === item.name ? "scale-110 text-biosoft-orange" : "text-biosoft-gray-dark hover:text-biosoft-orange hover:scale-105"
                     }`}
                     style={{ animationDelay: `${0.3 + index * 0.1}s` }}
                   >
                     {item.name}
                     {item.hasDropdown && <ChevronDown className="h-3 w-3 transition-transform duration-300 group-hover:rotate-180" />}
 
-                    {/* Enhanced underline animation */}
+                    {/* Enhanced underline animation with orange */}
                     <span
-                      className={`absolute -bottom-2 left-0 h-0.5 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light transition-all duration-500 ${
+                      className={`absolute -bottom-2 left-0 h-0.5 bg-biosoft-orange transition-all duration-500 ${
                         clickedItem === item.name ? "w-full animate-pulse" : "w-0 group-hover:w-full"
                       }`}
                     ></span>
 
-                    {/* Click ripple effect */}
-                    {clickedItem === item.name && <span className="absolute inset-0 bg-biosoft-blue-light/20 rounded-lg scale-150 opacity-50 animate-ping"></span>}
+                    {/* Click ripple effect with orange */}
+                    {clickedItem === item.name && <span className="absolute inset-0 bg-biosoft-orange-light/20 rounded-lg scale-150 opacity-50 animate-ping"></span>}
                   </button>
                 </div>
               ))}
             </nav>
 
-            {/* Fixed Desktop CTA with Proper Alignment */}
+            {/* Fixed Desktop CTA with Orange Theme */}
             <div className="hidden lg:flex items-center gap-3 animate-fade-in-right animate-delay-400">
               <Button
                 variant="ghost"
-                className="text-biosoft-gray-dark hover:text-biosoft-blue transition-all duration-300 hover:scale-105 font-semibold hover:bg-biosoft-blue-light/10 relative overflow-hidden group px-4 py-2"
+                className="text-biosoft-gray-dark hover:text-biosoft-orange transition-all duration-300 hover:scale-105 font-semibold hover:bg-biosoft-orange-light/10 relative overflow-hidden group px-4 py-2"
               >
                 <span className="relative z-10">Sign In</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-biosoft-blue-light/10 to-biosoft-blue/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <div className="absolute inset-0 bg-biosoft-orange-light/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </Button>
-              <Button className="bg-gradient-to-r from-biosoft-blue via-biosoft-blue-light to-biosoft-blue-lighter hover:from-biosoft-blue hover:via-biosoft-blue hover:to-biosoft-blue-light text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 font-semibold px-6 py-2.5 relative overflow-hidden group">
+              <Button className="bg-biosoft-orange hover:bg-biosoft-orange-light text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:-translate-y-0.5 font-semibold px-6 py-2.5 relative overflow-hidden group">
                 <span className="relative z-10 whitespace-nowrap">Free Trial</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-white/0 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+                <div className="absolute inset-0 bg-white/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
               </Button>
             </div>
 
@@ -184,7 +180,7 @@ const Header = () => {
         onClick={() => setIsMenuOpen(false)}
       />
 
-      {/* Enhanced Mobile Menu with Fixed positioning */}
+      {/* Enhanced Mobile Menu with Orange Theme */}
       <div
         className={`lg:hidden fixed top-0 left-0 right-0 bg-white/98 backdrop-blur-xl border-b border-gray-200/80 shadow-2xl transition-all duration-500 mobile-menu-container ${
           isMenuOpen ? "opacity-100 translate-y-0 z-40 pointer-events-auto" : "opacity-0 -translate-y-full z-40 pointer-events-none"
@@ -201,9 +197,9 @@ const Header = () => {
             <button
               key={item.name}
               onClick={() => handleMenuClick(item.name, item.href)}
-              className={`w-full text-left text-biosoft-gray-dark hover:text-biosoft-blue transition-all duration-300 font-semibold py-4 px-4 rounded-xl hover:bg-biosoft-blue-light/10 transform text-lg relative overflow-hidden group ${
+              className={`w-full text-left text-biosoft-gray-dark hover:text-biosoft-orange transition-all duration-300 font-semibold py-4 px-4 rounded-xl hover:bg-biosoft-orange-light/10 transform text-lg relative overflow-hidden group ${
                 isMenuOpen ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
-              } ${clickedItem === item.name ? "bg-biosoft-blue-light/20 text-biosoft-blue scale-105" : ""}`}
+              } ${clickedItem === item.name ? "bg-biosoft-orange-light/20 text-biosoft-orange scale-105" : ""}`}
               style={{
                 transitionDelay: isMenuOpen ? `${index * 0.1}s` : "0s",
                 animationFillMode: "both",
@@ -214,10 +210,10 @@ const Header = () => {
                 {item.hasDropdown && <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />}
               </span>
 
-              {/* Mobile click animation */}
-              {clickedItem === item.name && <div className="absolute inset-0 bg-gradient-to-r from-biosoft-blue-light/30 to-biosoft-blue/30 animate-pulse rounded-xl"></div>}
+              {/* Mobile click animation with orange */}
+              {clickedItem === item.name && <div className="absolute inset-0 bg-biosoft-orange-light/30 animate-pulse rounded-xl"></div>}
 
-              <div className="absolute inset-0 bg-gradient-to-r from-biosoft-blue-light/10 to-biosoft-blue/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-xl"></div>
+              <div className="absolute inset-0 bg-biosoft-orange-light/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-xl"></div>
             </button>
           ))}
 
@@ -230,11 +226,11 @@ const Header = () => {
           >
             <Button
               variant="ghost"
-              className="w-full text-biosoft-gray-dark hover:text-biosoft-blue transition-all duration-300 font-semibold py-4 hover:bg-biosoft-blue-light/10 rounded-xl text-lg"
+              className="w-full text-biosoft-gray-dark hover:text-biosoft-orange transition-all duration-300 font-semibold py-4 hover:bg-biosoft-orange-light/10 rounded-xl text-lg"
             >
               Sign In
             </Button>
-            <Button className="w-full bg-gradient-to-r from-biosoft-blue via-biosoft-blue-light to-biosoft-blue-lighter hover:from-biosoft-blue hover:via-biosoft-blue hover:to-biosoft-blue-light text-white rounded-xl transition-all duration-500 font-semibold py-4 shadow-lg hover:shadow-xl text-lg">
+            <Button className="w-full bg-biosoft-orange hover:bg-biosoft-orange-light text-white rounded-xl transition-all duration-500 font-semibold py-4 shadow-lg hover:shadow-xl text-lg">
               Free Trial
             </Button>
           </div>
