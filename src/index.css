@@ -45,18 +45,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-
-    /* Biosoft Brand Colors */
-    --biosoft-primary: 7, 122, 187; /* #077abb */
-    --biosoft-light-bg: 223, 233, 233; /* #dfe9e9 */
-    --biosoft-orange: 235, 108, 29; /* #eb6c1d */
-    --biosoft-yellow: 249, 203, 13; /* #f9cb0d */
-    --biosoft-dark-gray: 91, 95, 94; /* #5b5f5e */
-    --biosoft-gray: 127, 130, 124; /* #7f827c */
-    --biosoft-peach: 226, 154, 113; /* #e29a71 */
-    --biosoft-green: 81, 128, 80; /* #518050 */
-    --biosoft-light-blue: 108, 188, 236; /* #6cbcec */
-    --biosoft-medium-blue: 104, 180, 228; /* #68b4e4 */
   }
 
   .dark {
@@ -97,78 +85,6 @@
 
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-/* Biosoft Brand Color Utilities */
-@layer utilities {
-  .bg-biosoft-primary {
-    background-color: rgb(var(--biosoft-primary));
-  }
-  .bg-biosoft-light {
-    background-color: rgb(var(--biosoft-light-bg));
-  }
-  .bg-biosoft-orange {
-    background-color: rgb(var(--biosoft-orange));
-  }
-  .bg-biosoft-yellow {
-    background-color: rgb(var(--biosoft-yellow));
-  }
-  .bg-biosoft-dark-gray {
-    background-color: rgb(var(--biosoft-dark-gray));
-  }
-  .bg-biosoft-gray {
-    background-color: rgb(var(--biosoft-gray));
-  }
-  .bg-biosoft-peach {
-    background-color: rgb(var(--biosoft-peach));
-  }
-  .bg-biosoft-green {
-    background-color: rgb(var(--biosoft-green));
-  }
-  .bg-biosoft-light-blue {
-    background-color: rgb(var(--biosoft-light-blue));
-  }
-  .bg-biosoft-medium-blue {
-    background-color: rgb(var(--biosoft-medium-blue));
-  }
-
-  .text-biosoft-primary {
-    color: rgb(var(--biosoft-primary));
-  }
-  .text-biosoft-orange {
-    color: rgb(var(--biosoft-orange));
-  }
-  .text-biosoft-yellow {
-    color: rgb(var(--biosoft-yellow));
-  }
-  .text-biosoft-dark-gray {
-    color: rgb(var(--biosoft-dark-gray));
-  }
-  .text-biosoft-gray {
-    color: rgb(var(--biosoft-gray));
-  }
-  .text-biosoft-peach {
-    color: rgb(var(--biosoft-peach));
-  }
-  .text-biosoft-green {
-    color: rgb(var(--biosoft-green));
-  }
-  .text-biosoft-light-blue {
-    color: rgb(var(--biosoft-light-blue));
-  }
-  .text-biosoft-medium-blue {
-    color: rgb(var(--biosoft-medium-blue));
-  }
-
-  .border-biosoft-primary {
-    border-color: rgb(var(--biosoft-primary));
-  }
-  .border-biosoft-orange {
-    border-color: rgb(var(--biosoft-orange));
-  }
-  .border-biosoft-light {
-    border-color: rgb(var(--biosoft-light-bg));
   }
 }
 

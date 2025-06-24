@@ -31,19 +31,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-biosoft-light to-white">
+    <section className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-biosoft-light to-white border border-biosoft-primary/20 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
-            <div className="w-2 h-2 bg-gradient-to-r from-biosoft-primary to-biosoft-medium-blue rounded-full animate-pulse"></div>
-            <span className="text-biosoft-primary font-semibold text-sm tracking-wide uppercase">Trusted by Healthcare Professionals</span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-black text-biosoft-dark-gray mb-6 animate-fade-in-up animate-delay-100">
-            Trusted by
-            <span className="block bg-gradient-to-r from-biosoft-primary to-biosoft-medium-blue bg-clip-text text-transparent">Healthcare Professionals</span>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Trusted by Healthcare Professionals
           </h2>
-          <p className="text-xl text-biosoft-gray max-w-2xl mx-auto animate-fade-in-up animate-delay-200">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             See what healthcare providers are saying about our platform
           </p>
         </div>
@@ -52,18 +46,18 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="relative bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 group hover:-translate-y-1 hover:border-biosoft-primary/20"
+              className="relative bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0 group hover:-translate-y-1"
             >
               <CardContent className="p-8">
-                <Quote className="h-8 w-8 text-biosoft-primary mb-4 group-hover:text-biosoft-orange transition-colors" />
+                <Quote className="h-8 w-8 text-blue-500 mb-4 group-hover:text-orange-500 transition-colors" />
                 
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-biosoft-yellow fill-current" />
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
 
-                <p className="text-biosoft-gray mb-6 leading-relaxed italic">
+                <p className="text-gray-700 mb-6 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
 
@@ -74,9 +68,9 @@ const Testimonials = () => {
                     className="w-12 h-12 rounded-full mr-4 object-cover"
                   />
                   <div>
-                    <h4 className="font-semibold text-biosoft-dark-gray">{testimonial.name}</h4>
-                    <p className="text-sm text-biosoft-gray">{testimonial.role}</p>
-                    <p className="text-sm text-biosoft-primary font-medium">{testimonial.organization}</p>
+                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <p className="text-sm text-blue-600 font-medium">{testimonial.organization}</p>
                   </div>
                 </div>
               </CardContent>
