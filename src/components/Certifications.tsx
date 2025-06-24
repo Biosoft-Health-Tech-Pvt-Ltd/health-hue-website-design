@@ -34,26 +34,26 @@ const Certifications = () => {
       category: "Laboratory Standards",
       certificateImage: null,
     },
-    // {
-    //   name: "ABDM Certified",
-    //   description: "Ayushman Bharat Digital Mission certification for India's national digital health ecosystem",
-    //   icon: Globe,
-    //   color: "from-biosoft-orange to-biosoft-orange-light",
-    //   bgColor: "from-biosoft-orange/10 to-biosoft-orange-light/10",
-    //   category: "National Standards",
-    //   certificateImage: "/BIOSOFT_ABDM_CERTIFICATE.png",
-    //   hasDocument: true,
-    // },
-    // {
-    //   name: "WASA Certified",
-    //   description: "WASA certification ensuring comprehensive healthcare application security and compliance",
-    //   icon: Shield,
-    //   color: "from-biosoft-blue-light to-biosoft-blue-lighter",
-    //   bgColor: "from-biosoft-blue-light/10 to-biosoft-blue-lighter/10",
-    //   category: "Security & Compliance",
-    //   certificateImage: "/BIOSOFT_WASA_CERTIFICATE.png",
-    //   hasDocument: true,
-    // },
+    {
+      name: "ABDM Certified",
+      description: "Ayushman Bharat Digital Mission certification for India's national digital health ecosystem",
+      icon: Globe,
+      color: "from-biosoft-orange to-biosoft-orange-light",
+      bgColor: "from-biosoft-orange/10 to-biosoft-orange-light/10",
+      category: "National Standards",
+      certificateImage: "/BIOSOFT_ABDM_CERTIFICATE.png",
+      hasDocument: true,
+    },
+    {
+      name: "WASA Certified",
+      description: "WASA certification ensuring comprehensive healthcare application security and compliance",
+      icon: Shield,
+      color: "from-biosoft-blue-light to-biosoft-blue-lighter",
+      bgColor: "from-biosoft-blue-light/10 to-biosoft-blue-lighter/10",
+      category: "Security & Compliance",
+      certificateImage: "/BIOSOFT_WASA_CERTIFICATE.png",
+      hasDocument: true,
+    },
   ];
 
   const handleViewCertificate = (certification) => {
@@ -84,6 +84,52 @@ const Certifications = () => {
             Our eBios platform meets and exceeds the most stringent international healthcare standards, ensuring seamless interoperability, data security, and regulatory compliance
             across all healthcare environments.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {certifications.map((cert, index) => (
+            <Card
+              key={index}
+              className={`group hover:shadow-2xl transition-all duration-700 border-0 shadow-lg hover-lift animate-scale-in opacity-0 bg-gradient-to-br ${cert.bgColor} backdrop-blur-sm`}
+              style={{
+                animationDelay: `${0.1 + index * 0.15}s`,
+                animationFillMode: "forwards",
+              }}
+            >
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
+                  >
+                    <cert.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-biosoft-gray-medium uppercase tracking-wider mb-1">{cert.category}</div>
+                    <h3 className="text-xl font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300">{cert.name}</h3>
+                  </div>
+                </div>
+
+                <p className="text-biosoft-gray-medium leading-relaxed group-hover:text-biosoft-gray-dark transition-colors duration-300 font-medium mb-6">{cert.description}</p>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-biosoft-green" />
+                    <span className="text-sm font-semibold text-biosoft-green">Certified & Compliant</span>
+                  </div>
+
+                  {cert.hasDocument && (
+                    <button
+                      onClick={() => handleViewCertificate(cert)}
+                      className="flex items-center gap-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm font-semibold"
+                    >
+                      <Eye className="h-4 w-4" />
+                      View Certificate
+                    </button>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* ABDM & WASA Certificates Highlight Section */}
@@ -188,52 +234,6 @@ const Certifications = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {certifications.map((cert, index) => (
-            <Card
-              key={index}
-              className={`group hover:shadow-2xl transition-all duration-700 border-0 shadow-lg hover-lift animate-scale-in opacity-0 bg-gradient-to-br ${cert.bgColor} backdrop-blur-sm`}
-              style={{
-                animationDelay: `${0.1 + index * 0.15}s`,
-                animationFillMode: "forwards",
-              }}
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
-                  >
-                    <cert.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold text-biosoft-gray-medium uppercase tracking-wider mb-1">{cert.category}</div>
-                    <h3 className="text-xl font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300">{cert.name}</h3>
-                  </div>
-                </div>
-
-                <p className="text-biosoft-gray-medium leading-relaxed group-hover:text-biosoft-gray-dark transition-colors duration-300 font-medium mb-6">{cert.description}</p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-biosoft-green" />
-                    <span className="text-sm font-semibold text-biosoft-green">Certified & Compliant</span>
-                  </div>
-
-                  {/* {cert.hasDocument && (
-                    <button
-                      onClick={() => handleViewCertificate(cert)}
-                      className="flex items-center gap-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm font-semibold"
-                    >
-                      <Eye className="h-4 w-4" />
-                      View Certificate
-                    </button>
-                  )} */}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         {/* Trust Indicators */}
