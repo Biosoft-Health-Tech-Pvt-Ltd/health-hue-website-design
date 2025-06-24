@@ -19,15 +19,15 @@ const Footer = () => {
     <footer className="bg-biosoft-gray-dark text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-6 gap-8">
-          {/* Company Info with Logo */}
+          {/* Company Info with Logo - INCREASED SIZE */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
-                {/* Biosoft Logo Image */}
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg overflow-hidden">
+                {/* Biosoft Logo Image - INCREASED SIZE */}
                 <img
                   src="/BiosoftLogo.png"
                   alt="Biosoft Healthcare Solutions Logo"
-                  className="h-10 w-10 object-contain"
+                  className="h-14 w-14 object-contain"
                   onError={(e) => {
                     // Fallback to JPG if PNG fails
                     const img = e.target as HTMLImageElement;
@@ -38,7 +38,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-biosoft-blue-light to-biosoft-blue-lighter bg-clip-text text-transparent">Biosoft</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-biosoft-blue-light to-biosoft-blue-lighter bg-clip-text text-transparent">Biosoft</span>
                 <div className="text-sm text-biosoft-gray -mt-1">healthcare made simple</div>
               </div>
             </div>

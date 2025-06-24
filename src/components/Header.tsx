@@ -77,19 +77,19 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            {/* Enhanced Logo with Biosoft Logo Image */}
+            {/* Enhanced Logo with Biosoft Logo Image - INCREASED SIZE */}
             <div className="flex items-center gap-3 animate-fade-in-left group cursor-pointer">
               <div className="relative">
                 <div
                   className={`${
-                    isScrolled ? "w-10 h-10" : "w-12 h-12"
+                    isScrolled ? "w-14 h-14" : "w-20 h-14"
                   } bg-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-110 hover:rotate-1 group-hover:shadow-biosoft-orange/25 overflow-hidden`}
                 >
-                  {/* Biosoft Logo Image */}
+                  {/* Biosoft Logo Image - INCREASED SIZE */}
                   <img
                     src="/BiosoftLogo.png"
                     alt="Biosoft Healthcare Solutions Logo"
-                    className={`${isScrolled ? "h-8 w-8" : "h-10 w-10"} object-contain transition-all duration-500 group-hover:scale-110`}
+                    className={`${isScrolled ? "h-11 w-11" : "h-13 w-19"} object-contain transition-all duration-500 group-hover:scale-110`}
                     onError={(e) => {
                       // Fallback to JPG if PNG fails
                       const img = e.target as HTMLImageElement;
@@ -105,12 +105,12 @@ const Header = () => {
                 </div>
               </div>
               <div className="transition-all duration-500">
-                <span className={`${isScrolled ? "text-xl" : "text-2xl"} font-black text-biosoft-gray-dark transition-all duration-500 group-hover:text-biosoft-orange`}>
+                <span className={`${isScrolled ? "text-2xl" : "text-3xl"} font-black text-biosoft-gray-dark transition-all duration-500 group-hover:text-biosoft-orange`}>
                   Biosoft
                 </span>
                 <div
                   className={`${
-                    isScrolled ? "text-xs" : "text-xs"
+                    isScrolled ? "text-sm" : "text-sm"
                   } text-biosoft-gray-dark font-medium -mt-1 tracking-wider transition-all duration-500 group-hover:text-biosoft-orange`}
                 >
                   HEALTHCARE MADE SIMPLE
