@@ -15,6 +15,7 @@ const Certifications = () => {
       bgColor: "from-biosoft-blue-light/10 to-biosoft-blue-lighter/10",
       category: "Interoperability",
       certificateImage: null,
+      showInGrid: true,
     },
     {
       name: "SNOMED CT",
@@ -24,6 +25,7 @@ const Certifications = () => {
       bgColor: "from-biosoft-green/10 to-biosoft-orange-light/10",
       category: "Clinical Standards",
       certificateImage: null,
+      showInGrid: true,
     },
     {
       name: "LOINC",
@@ -33,6 +35,7 @@ const Certifications = () => {
       bgColor: "from-biosoft-orange/10 to-biosoft-yellow/10",
       category: "Laboratory Standards",
       certificateImage: null,
+      showInGrid: true,
     },
     {
       name: "ABDM Certified",
@@ -43,6 +46,7 @@ const Certifications = () => {
       category: "National Standards",
       certificateImage: "/BIOSOFT_ABDM_CERTIFICATE.png",
       hasDocument: true,
+      showInGrid: false,
     },
     {
       name: "WASA Certified",
@@ -53,6 +57,7 @@ const Certifications = () => {
       category: "Security & Compliance",
       certificateImage: "/BIOSOFT_WASA_CERTIFICATE.png",
       hasDocument: true,
+      showInGrid: false,
     },
   ];
 
@@ -87,49 +92,51 @@ const Certifications = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {certifications.map((cert, index) => (
-            <Card
-              key={index}
-              className={`group hover:shadow-2xl transition-all duration-700 border-0 shadow-lg hover-lift animate-scale-in opacity-0 bg-gradient-to-br ${cert.bgColor} backdrop-blur-sm`}
-              style={{
-                animationDelay: `${0.1 + index * 0.15}s`,
-                animationFillMode: "forwards",
-              }}
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
-                  >
-                    <cert.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold text-biosoft-gray-medium uppercase tracking-wider mb-1">{cert.category}</div>
-                    <h3 className="text-xl font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300">{cert.name}</h3>
-                  </div>
-                </div>
-
-                <p className="text-biosoft-gray-medium leading-relaxed group-hover:text-biosoft-gray-dark transition-colors duration-300 font-medium mb-6">{cert.description}</p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-biosoft-green" />
-                    <span className="text-sm font-semibold text-biosoft-green">Certified & Compliant</span>
-                  </div>
-
-                  {cert.hasDocument && (
-                    <button
-                      onClick={() => handleViewCertificate(cert)}
-                      className="flex items-center gap-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm font-semibold"
+          {certifications
+            .filter((cert) => cert.showInGrid)
+            .map((cert, index) => (
+              <Card
+                key={index}
+                className={`group hover:shadow-2xl transition-all duration-700 border-0 shadow-lg hover-lift animate-scale-in opacity-0 bg-gradient-to-br ${cert.bgColor} backdrop-blur-sm`}
+                style={{
+                  animationDelay: `${0.1 + index * 0.15}s`,
+                  animationFillMode: "forwards",
+                }}
+              >
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${cert.color} flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}
                     >
-                      <Eye className="h-4 w-4" />
-                      View Certificate
-                    </button>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                      <cert.icon className="h-8 w-8 text-white transform group-hover:rotate-12 transition-transform duration-300" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-semibold text-biosoft-gray-medium uppercase tracking-wider mb-1">{cert.category}</div>
+                      <h3 className="text-xl font-bold text-biosoft-gray-dark group-hover:text-biosoft-blue transition-colors duration-300">{cert.name}</h3>
+                    </div>
+                  </div>
+
+                  <p className="text-biosoft-gray-medium leading-relaxed group-hover:text-biosoft-gray-dark transition-colors duration-300 font-medium mb-6">{cert.description}</p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-5 w-5 text-biosoft-green" />
+                      <span className="text-sm font-semibold text-biosoft-green">Certified & Compliant</span>
+                    </div>
+
+                    {cert.hasDocument && (
+                      <button
+                        onClick={() => handleViewCertificate(cert)}
+                        className="flex items-center gap-2 bg-gradient-to-r from-biosoft-blue to-biosoft-blue-light hover:from-biosoft-blue hover:to-biosoft-blue text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm font-semibold"
+                      >
+                        <Eye className="h-4 w-4" />
+                        View Certificate
+                      </button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
         </div>
 
         {/* ABDM & WASA Certificates Highlight Section */}
