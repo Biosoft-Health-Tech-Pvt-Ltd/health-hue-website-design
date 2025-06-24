@@ -1,3 +1,5 @@
+// src/pages/Index.tsx - Updated with Blog Section
+
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -8,6 +10,7 @@ import UserExperiences from "@/components/UserExperiences";
 import Team from "@/components/Team";
 import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
+import HomepageBlog from "@/components/HomepageBlog";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -95,6 +98,9 @@ const Index = () => {
           </section>
           <section id="testimonials" className="bg-white">
             <Testimonials />
+          </section>
+          <section id="blog" className="bg-biosoft-gray/10">
+            <HomepageBlog />
           </section>
           <section id="contact" className="bg-gradient-primary">
             <CTA />
